@@ -1,0 +1,511 @@
+nav {
+  display: flex;
+  background-color: #282c34;
+  justify-content: space-around;
+  color: white;
+  flex-wrap: wrap;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+.ContainerH {
+  position: relative;
+  top: 20vh;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-self: center;
+}
+
+nav ul a {
+  margin: 10px;
+  padding: 10px;
+}
+
+nav a,
+nav i {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s;
+  position: relative;
+
+}
+
+i {
+  transition: all .5s
+}
+
+nav a:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition: all 0.2s;
+
+}
+
+.Home img {
+  border-radius: 8px;
+  width: 150px;
+  height: 190px;
+  scale: 1;
+}
+
+.Home {
+  text-align: center;
+
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-6vh);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0vh);
+
+  }
+}
+
+nav a:hover,
+nav i:hover {
+  color: lightgray;
+}
+
+nav div {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Home {
+    text-align: center;
+
+
+  }
+
+  .card {
+    max-width: 300px;
+  }
+
+  nav div,
+  nav ul {
+    margin: 10px 0;
+  }
+
+  .ContainerH {
+    position: relative;
+    top: 25vh;
+
+  }
+}
+
+.card {
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.avatar {
+  margin-right: 30px;
+
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Your existing styles for larger screens */
+
+/* Media Query for Mobile Devices (max-width: 600px) */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .avatar {
+    margin-right: 0px;
+  }
+
+  .Home {
+    text-align: center;
+  }
+
+  .card {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav div,
+  nav ul {
+    margin: 10px 0;
+  }
+
+  .ContainerH {
+    position: relative;
+    top: 25vh;
+  }
+
+  /* Styles for mobile devices (up to 600px) */
+  nav img {
+    height: 30px;
+    /* Adjust the size of the logo image */
+    width: 30px;
+    margin-bottom: 10px;
+  }
+
+  nav ul a {
+    margin: 5px;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .services,
+  .ProjectsContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .CardS {
+    margin: 15px;
+    /* Add margin to create space between cards */
+  }
+}
+
+/* Media Query for Mobile Devices (max-width: 300px) */
+@media (max-width: 300px) {
+  nav img {
+    height: 25px;
+    width: 25px;
+    margin-bottom: 8px;
+  }
+
+  nav ul a {
+    font-size: 12px;
+  }
+
+  nav a:hover::after {
+    bottom: 0;
+  }
+
+  .Home img {
+    width: 120px;
+    height: 150px;
+  }
+
+  .Home {
+    top: 10vh;
+  }
+
+  .card {
+    max-width: 250px;
+  }
+
+  .avatar {
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+  }
+
+  .content {
+    text-align: left;
+  }
+
+  .name {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+
+  }
+
+
+  .services,
+  .ProjectsContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+
+  .CardS {
+    margin: 15px;
+  }
+}
+
+.services,
+.ProjectsContent {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+
+.CardS,
+.cardProject {
+  margin: 15px;
+  width: 350px;
+  padding: 15px;
+  height: 285px;
+  background: #313131;
+  border-radius: 20px;
+  ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.CardS h1,
+.cardProject h1,
+.CardS p,
+.cardProject p {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  ;
+}
+
+.CardS:hover h1,
+.cardProject:hover h1,
+.CardS:hover p,
+.cardProject:hover p {
+  opacity: 1;
+  transition: 0.2s ease-in-out;
+
+}
+
+.CardS img {
+  width: 80px;
+  height: 80px;
+  transition: 0.2s ease-in-out;
+}
+
+.CardS:hover img {
+  filter: blur(7px);
+  width: 120px;
+  height: 120px;
+  animation: anim 3s infinite;
+}
+
+@keyframes anim {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.CardS:hover,
+.cardProject:hover {
+  transform: scale(1.04) rotate(-1deg);
+}
+
+.Projects {
+  position: relative;
+  top: 25vh;
+}
+
+.Title {
+  text-align: center;
+}
+
+.HeaderTitle {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.6em 2em;
+  border: rgb(133, 167, 154) solid 0.15em;
+  border-radius: 0.25em;
+  color: rgb(133, 167, 154);
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 300ms, color 300ms;
+  user-select: none;
+  width: 15px;
+  height: 15px;
+}
+
+.button p {
+  z-index: 1;
+}
+
+.button:hover {
+  color: white;
+}
+
+.ProjectsContainer,
+.contact-container {
+  opacity: 0;
+  /* Start with opacity set to 0 */
+  transform: translateY(-15px);
+  /* Move down slightly */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  /* Add transition properties */
+}
+
+.ProjectsContainer.active,
+.contact-container.active {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+
+  opacity: 1;
+  /* Transition to full opacity */
+  transform: translateY(0);
+  /* Move back to original position */
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.ButtonBloc {
+  position: relative;
+  top: 4vh;
+  left: 1vh
+}
+
+.button:active {
+  border-color: teal;
+}
+
+.button::after,
+.button::before {
+  content: "";
+  position: absolute;
+  width: 9em;
+  aspect-ratio: 1;
+  background: #282c34;
+  opacity: 50%;
+  border-radius: 50%;
+  transition: transform 500ms, background 300ms;
+}
+
+.button::before {
+  left: 0;
+  transform: translateX(-8em);
+}
+
+.button::after {
+  right: 0;
+  transform: translateX(8em);
+}
+
+.button:hover:before {
+  transform: translateX(-1em);
+}
+
+.button:hover:after {
+  transform: translateX(1em);
+}
+
+.button:active:before,
+.button:active:after {
+  background: teal;
+}
+
+.cardProject img {
+  width: 70%;
+  height: 70%;
+}
+
+/* Contact.css */
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  top: 30vh;
+
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  height: 150px;
+}
+
+#button {
+  text-align: center;
+  width: 30px;
+
+}
+
+#button p {
+  position: absolute;
+  left: 24%;
+}
